@@ -659,6 +659,10 @@ width: 100px;
 .contact-button{
     background-color: #bf0000;
 }
+.h5-contact{
+    font-size: 0.7rem;
+    color: #272727;
+}
 
 /*** Contact End ***/
 
@@ -689,8 +693,8 @@ width: 100px;
 }
 @media only screen and (max-width:800px){
     .footer-logo{
-        width: 350px;
-        height: 350px;
+        width: 250px;
+        height: 250px;
         margin: 0;
     }
 }
