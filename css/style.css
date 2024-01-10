@@ -61,55 +61,16 @@
     bottom: 30px;
     z-index: 99;
 }
-.logo{
-    width: 150px;
-}
-.navbar{
-    height: auto;
-}
 
 /*** Button End ***/
-
-
-/*** Topbar Start ***/
-
-.topbar .top-info {
-    letter-spacing: 1px;
-}
-
-.topbar .top-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.topbar .top-link a {
-    margin-right: 10px;
-}
-
-#note {
-    width: 500px;
-    overflow: hidden;
-}
-
-#note small {
-    position: relative;
-    display: inline-block;
-    animation: mymove 5s infinite;
-    animation-timing-function: all;
-}
-
-@keyframes mymove {
-    from {left: -100%;}
-    to {left: 100%;}
-}
-
-/*** Topbar End ***/
 
 
 /*** Navbar Start ***/
 .navbar .navbar-nav {
     padding: 15px 0;
+}
+.navbar-nav{
+    background-color: #000000;
 }
 
 .navbar .navbar-nav .nav-link {
@@ -152,7 +113,38 @@
     transition: .5s;
     opacity: 1;
 }
-
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+  .sticky + .content {
+    padding-top: 60px;
+  }
+  .logo{
+    width: 180px;
+    height: 180px;
+}
+@media only screen and (max-width:800px){
+    .logo{
+height:100px ;
+width: 100px;
+    }
+    .navbar{
+        height: 100px;
+    }
+}
+@media only screen and (max-width:1000px) and (min-width:801px){
+.logo{
+    height: 130px;
+    width: 130px;
+        }
+.navbar{
+            height: 130px;
+        }
+    }
 /*** Navbar End ***/
 
 
@@ -160,6 +152,9 @@
 
 .carousel-item {
     position: relative;
+    width: 100%;
+    background-size: cover;
+    
 }
 
 .carousel-item::after {
@@ -243,8 +238,8 @@
 }
 
 .carousel-caption .carousel-content a button.carousel-content-btn2:hover {
-    background: var(--bs-secondary);
-    color: var(--bs-dark);
+    background: #bf0000;
+    color: #ffffff;
     border: 0;
     opacity: 1;
     transition: 1s;
@@ -317,6 +312,14 @@
     font-size: 18px;
     color: var(--bs-white);
 }
+.custom-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
 
 /*** Carousel End ***/
 
@@ -374,6 +377,11 @@
 .services-item:hover .services-content-icon p {
     color: var(--bs-white);
 }
+.primary-icon{
+    width: 100px;
+}
+
+
 
 /*** Services End ***/
 
@@ -648,6 +656,9 @@
 .contact-form {
     background: #272727;
 }
+.contact-button{
+    background-color: #bf0000;
+}
 
 /*** Contact End ***/
 
@@ -671,3 +682,15 @@
     border: 0;
 }
 
+.footer-logo{
+    width: 250px;
+    height: 250px;
+    margin-bottom: 150px;
+}
+@media only screen and (max-width:800px){
+    .footer-logo{
+        width: 350px;
+        height: 350px;
+        margin: 0;
+    }
+}
